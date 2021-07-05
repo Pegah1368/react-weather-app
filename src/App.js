@@ -10,8 +10,7 @@ export default function App() {
           target="blank"
           rel="noreferrer"
         >
-          {" "}
-          Open source
+          Open source{" "}
         </a>
         Coded by Pegah Bozorgmanesh
       </footer>
