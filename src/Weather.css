@@ -1,4 +1,107 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  margin: 150px;
+  font-size: 18px;
+}
+
+.weather h1 {
+  color: rgb(32, 33, 36);
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin: 20px 0 0 0;
+}
+.weather ul {
+  margin: 0;
+  padding: 0;
+}
+.weather li {
+  list-style: none;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+  color: #393e46;
+  line-height: 25px;
+}
+li::first-letter {
+  text-transform: capitalize;
+}
 .weather {
-  border: 1px solid #a7bbc7;
   max-width: 600px;
+  margin: 30px auto;
+  padding: 40px;
+  border: 1px solid #a7bbc7;
+  border-radius: 5px;
+  background-color: #a7bbc7;
+  border-radius: 1em;
+  opacity: 1;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.overview {
+  margin-bottom: 25px;
+}
+.weather-temperature img {
+  position: relative;
+  margin-right: 5px;
+  width: 64px;
+  height: 64px;
+  top: -20px;
+}
+.weather-temperature strong {
+  color: rgb(32, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 30px;
+  top: -25px;
+}
+
+.weather-temperature .active {
+  color: rgb(32, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-forcast {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #a7bbc7;
+  border-radius: 5px;
+  border-radius: 1em;
+  padding: 20px;
+  opacity: 1;
+}
+.weather-forcast-date {
+  font-size: 16px;
+  color: #000;
+  opacity: 0.6;
+}
+.weather-forcast-temperature {
+  font-size: 13px;
+}
+.weather-forcast-temperature-min {
+  opacity: 0.6;
+}
+
+.source {
+  font-family: "Noto Sans KR', sans-se";
+  font-size: 18px;
+  color: #ffff;
 }
