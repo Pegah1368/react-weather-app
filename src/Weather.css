@@ -104,4 +104,6 @@ li::first-letter {
   font-family: "Noto Sans KR', sans-se";
   font-size: 18px;
   color: #ffff;
+  font-size: 11px;
+  margin: 8px 0;
 }
