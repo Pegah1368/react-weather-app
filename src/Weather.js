@@ -3,8 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  const [weatherData, setWeatherData] = useState({});
-  const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,19 +11,21 @@ export default function Weather() {
 
   function showTemperature(response) {
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
+      date: "Monday 15:00",
       city: response.data.name,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
     });
-    setReady(true);
   }
 
   function changeValue(event) {
     // (event.target.value);
   }
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="weather">
         <form onSubmit={handleSubmit}>
@@ -49,20 +50,20 @@ export default function Weather() {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>Monday 15:00</li>
-          <li>{weatherData.description}</li>
+          <li>{weatherData.date}</li>
+          <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
           <div className="col-6">
             <div className="clearfix weather-temperature">
               <img
-                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="partly cloudy"
+                src={weatherData.iconUrl}
+                alt={weatherData.description}
                 className="float-left"
               />
               <strong className="temperature">
                 {" "}
-                {weatherData.temperature}
+                {Math.round(weatherData.temperature)}
               </strong>
               <span className="units"> ºC </span>
             </div>
