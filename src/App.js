@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Tehran" />
         <footer>
           <a
             href="https://fervent-albattani-67c43b.netlify.app/"
