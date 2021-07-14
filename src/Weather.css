@@ -49,24 +49,29 @@ li::first-letter {
 .overview {
   margin-bottom: 25px;
 }
-.weather-temperature img {
-  position: relative;
-  margin-right: 5px;
+.weather-temperature canvas {
+  margin-right: 10px;
   width: 64px;
   height: 64px;
-  top: -20px;
+  display: inline-block;
+  position: relative;
+  bottom: -39px;
 }
 .weather-temperature strong {
   color: rgb(32, 33, 33);
   font-size: 64px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 64px;
+  position: relative;
+  bottom: 30px;
+  left: 80px;
 }
 
 .weather-temperature .units {
   position: relative;
-  font-size: 30px;
-  top: -25px;
+  font-size: 25px;
+  top: -55px;
+  left: 77px;
 }
 
 .weather-temperature .active {
