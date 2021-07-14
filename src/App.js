@@ -7,14 +7,14 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Stockholm" />
         <footer>
+          This project was coded by Pegah Bozorgmanesh and is
           <a
-            href="https://fervent-albattani-67c43b.netlify.app/"
+            href="https://github.com/Pegah1368/react-weather-app"
             target="blank"
             rel="noreferrer"
           >
-            Open source{" "}
+            {""} open sourced on GitHub{" "}
           </a>
-          Coded by Pegah Bozorgmanesh
         </footer>
       </div>
     </div>
