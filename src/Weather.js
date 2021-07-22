@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherData from "./WeatherData";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import "./Weather.css";
@@ -9,6 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function showTemperature(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -18,6 +20,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed),
       icon: response.data.weather[0].icon,
+      feelsLike: Math.round(response.data.main.feels_like),
     });
   }
 
@@ -54,12 +57,13 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="search"
-                className="btn btn-primary w-100"
+                className="btn btn-warning w-100"
               />
             </div>
           </div>
         </form>
         <WeatherData data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
