@@ -14,7 +14,7 @@ export default function WeatherData(props) {
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6">
+        <div className="col-7">
           <div className="clearfix weather-temperature">
             <div className="float-left">
               <WeatherIcon code={props.data.icon} size={52} />
@@ -22,7 +22,7 @@ export default function WeatherData(props) {
             <WeatherTemperature celsius={props.data.temperature} />
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-5 ">
           <ul>
             <li>Feels like:{props.data.feelsLike}</li>
             <li>Humidity:{props.data.humidity} %</li>

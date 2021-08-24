@@ -73,6 +73,7 @@ li::first-letter {
   font-size: 20px;
   top: -60px;
   left: 77px;
+  margin-right: 20px;
 }
 
 .weather-temperature .active {
@@ -86,7 +87,7 @@ li::first-letter {
 
 footer {
   font-family: "Noto Sans KR', sans-se";
-  color: #202124;
+  color: #ffff;
   font-size: 15px;
   margin: 10px 0;
 }
